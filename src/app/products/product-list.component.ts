@@ -19,9 +19,7 @@ export class ProductListComponent implements OnInit {
 
   public set listFilter(value: string) {
     this._listFilter = value;
-    console.log('In setter', value);
     this.filteredProducts = this.performFilter(value);
-    console.log(this.filteredProducts);
   }
 
   filteredProducts: IProduct[] = [];
@@ -90,6 +88,6 @@ export class ProductListComponent implements OnInit {
     this.showImage = !this.showImage;
   }
   ngOnInit(): void {
-    this._listFilter = 'cart';
+    this.listFilter = 'cart';
   }
 }
